@@ -660,7 +660,7 @@ module Writexlsx
     end
 
     def force_text_format?
-      @num_format == 49 # Text format ('@')
+      @num_format == '@' # Text format ('@')
     end
 
     private

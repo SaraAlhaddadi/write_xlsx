@@ -1417,6 +1417,7 @@ module Writexlsx
                 elsif cell_data.is_a? FormulaArrayCellData
                   "{=#{cell_data.token}}"
                 elsif cell_data.is_a? StringCellData
+                  format.set_num_format('@')
                   @workbook.shared_strings.string(cell_data.data[:sst_id])
                 else
                   cell_data.data
